@@ -93,15 +93,16 @@
 
 
 
-<meta name="description" content="Aspire to inspire until I expire.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="wangliying&#39;s blog">
-<meta property="og:url" content="http://wliying.github.io/index.html">
+<meta name="description" content="我是部署在一台centos7的测试机上，官方文档地址https://book.open-falcon.org/zh_0_2/index.html我没有按照官方文档配置，按官网说的一台机器启动全部后端组件没有起完全，所以我采用的是分布式安装启动。 下载：wget https://github.com/XiaoMi/open-falcon/releases/download/0.0.5/open-fa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="open-falcon + centos7">
+<meta property="og:url" content="http://wliying.github.io/2017/07/21/open-falcon/index.html">
 <meta property="og:site_name" content="wangliying&#39;s blog">
-<meta property="og:description" content="Aspire to inspire until I expire.">
+<meta property="og:description" content="我是部署在一台centos7的测试机上，官方文档地址https://book.open-falcon.org/zh_0_2/index.html我没有按照官方文档配置，按官网说的一台机器启动全部后端组件没有起完全，所以我采用的是分布式安装启动。 下载：wget https://github.com/XiaoMi/open-falcon/releases/download/0.0.5/open-fa">
+<meta property="og:updated_time" content="2017-07-21T08:22:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wangliying&#39;s blog">
-<meta name="twitter:description" content="Aspire to inspire until I expire.">
+<meta name="twitter:title" content="open-falcon + centos7">
+<meta name="twitter:description" content="我是部署在一台centos7的测试机上，官方文档地址https://book.open-falcon.org/zh_0_2/index.html我没有按照官方文档配置，按官网说的一台机器启动全部后端组件没有起完全，所以我采用的是分布式安装启动。 下载：wget https://github.com/XiaoMi/open-falcon/releases/download/0.0.5/open-fa">
 
 
 
@@ -129,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://wliying.github.io/"/>
+  <link rel="canonical" href="http://wliying.github.io/2017/07/21/open-falcon/"/>
 
 
 
 
 
-  <title>wangliying's blog</title>
+  <title>open-falcon + centos7 | wangliying's blog</title>
   
 
 
@@ -160,9 +161,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,9 +244,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -273,9 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/21/open-falcon/" itemprop="url">open-falcon + centos7</a></h1>
+          <h1 class="post-title" itemprop="name headline">open-falcon + centos7</h1>
         
 
         <div class="post-meta">
@@ -287,7 +284,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T08:22:57Z">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T16:22:57+08:00">
                 2017-07-21
               </time>
             
@@ -322,9 +319,7 @@
       
 
       
-        
-          
-            <p>我是部署在一台centos7的测试机上，官方文档地址<a href="https://book.open-falcon.org/zh_0_2/index.html" target="_blank" rel="external">https://book.open-falcon.org/zh_0_2/index.html</a><br>我没有按照官方文档配置，按官网说的一台机器启动全部后端组件没有起完全，所以我采用的是分布式安装启动。</p>
+        <p>我是部署在一台centos7的测试机上，官方文档地址<a href="https://book.open-falcon.org/zh_0_2/index.html" target="_blank" rel="external">https://book.open-falcon.org/zh_0_2/index.html</a><br>我没有按照官方文档配置，按官网说的一台机器启动全部后端组件没有起完全，所以我采用的是分布式安装启动。</p>
 <h4 id="下载："><a href="#下载：" class="headerlink" title="下载："></a>下载：</h4><p><code>wget https://github.com/XiaoMi/open-falcon/releases/download/0.0.5/open-falcon-0.0.5.tar.gz -O open-falcon.tar.gz</code></p>
 <h4 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h4><p><code>mkdir tmp
 tar -zxvf open-falcon.tar.gz -C ./tmp</code></p>
@@ -347,20 +342,27 @@ tar -zxvf open-falcon.tar.gz -C ./tmp</code></p>
 <p>另外还有三个模块我没有启动<br>task  监控自检程序<br>gateway  貌似是需要跨机房时候会用<br>redis-monitor.py  script文件夹中有一个简单的脚本，把redis info 中的数据读出写入数据库。</p>
 <p>That’s all!<br>我会继续完善哒😊</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
+
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <div>
+      
+        
+
       
     </div>
 
@@ -368,260 +370,38 @@ tar -zxvf open-falcon.tar.gz -C ./tmp</code></p>
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://wliying.github.io/2017/07/13/hexo-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="wangliying">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wangliying's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/13/hexo-blog/" itemprop="url">Hexo + GitHub Pages搭建博客</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-13T03:10:02Z">
-                2017-07-13
-              </time>
+              <a href="/2017/07/13/hexo-blog/" rel="next" title="Hexo + GitHub Pages搭建博客">
+                <i class="fa fa-chevron-left"></i> Hexo + GitHub Pages搭建博客
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <h4 id="准备环境："><a href="#准备环境：" class="headerlink" title="准备环境："></a>准备环境：</h4><ul>
-<li>Node.js</li>
-<li>Git</li>
-</ul>
-<blockquote>
-<p>ps:因为Hexo博客系统基于Node.js编写，所以环境需要安装Node.js</p>
-</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/13/hexo-blog/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://wliying.github.io/2017/07/13/goddness/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="wangliying">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="wangliying's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/13/goddness/" itemprop="url">My goddess</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-13T02:15:28Z">
-                2017-07-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>莹仔的第一篇福利博文</p>
-<h2 id="我的短发女神"><a href="#我的短发女神" class="headerlink" title="我的短发女神"></a>我的短发女神</h2><p><img src="../../images/gao.JPG" alt="goddess"></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/13/goddness/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -629,6 +409,10 @@ tar -zxvf open-falcon.tar.gz -C ./tmp</code></p>
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -649,8 +433,17 @@ tar -zxvf open-falcon.tar.gz -C ./tmp</code></p>
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -694,6 +487,22 @@ tar -zxvf open-falcon.tar.gz -C ./tmp</code></p>
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载："><span class="nav-number">1.</span> <span class="nav-text">下载：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解压"><span class="nav-number">2.</span> <span class="nav-text">解压</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基础环境"><span class="nav-number">3.</span> <span class="nav-text">基础环境</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模块配置"><span class="nav-number">4.</span> <span class="nav-text">模块配置</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#agent"><span class="nav-number">4.1.</span> <span class="nav-text">agent</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#hbs"><span class="nav-number">4.2.</span> <span class="nav-text">hbs</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#transfer"><span class="nav-number">4.3.</span> <span class="nav-text">transfer</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#judge"><span class="nav-number">4.4.</span> <span class="nav-text">judge</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#graph"><span class="nav-number">4.5.</span> <span class="nav-text">graph</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#dashboard"><span class="nav-number">4.6.</span> <span class="nav-text">dashboard</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#query"><span class="nav-number">4.7.</span> <span class="nav-text">query</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#fe"><span class="nav-number">4.8.</span> <span class="nav-text">fe</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#portal"><span class="nav-number">4.9.</span> <span class="nav-text">portal</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#alarm"><span class="nav-number">4.10.</span> <span class="nav-text">alarm</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sender"><span class="nav-number">4.11.</span> <span class="nav-text">sender</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#links"><span class="nav-number">4.12.</span> <span class="nav-text">links</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -819,10 +628,10 @@ tar -zxvf open-falcon.tar.gz -C ./tmp</code></p>
 
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 
