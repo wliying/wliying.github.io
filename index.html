@@ -256,7 +256,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://wliying.github.io/2017/07/21/open-falcon/">
+    <link itemprop="mainEntityOfPage" href="http://wliying.github.io/2017/09/16/open-falcon/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wangliying">
@@ -275,7 +275,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/07/21/open-falcon/" itemprop="url">open-falcon + centos7</a></h1>
+                <a class="post-title-link" href="/2017/09/16/open-falcon/" itemprop="url">open-falcon + centos7</a></h1>
         
 
         <div class="post-meta">
@@ -287,8 +287,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T08:22:57Z">
-                2017-07-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-16T07:55:49Z">
+                2017-09-16
               </time>
             
 
@@ -345,7 +345,148 @@ tar -zxvf open-falcon.tar.gz -C ./tmp</code></p>
 <h5 id="sender"><a href="#sender" class="headerlink" title="sender"></a>sender</h5><p>这个组件用于调用自己提供的短信和邮件接口，编辑cfg.json添加地址<br>报警消息是先写入redis队列中，之后再调用接口；<br>worker参数是对队列的配置</p>
 <h5 id="links"><a href="#links" class="headerlink" title="links"></a>links</h5><p>报警合并组件，Python应用，我还是用的Python虚拟机启动的，没有试直接用Python是否可以启动</p>
 <p>另外还有三个模块我没有启动<br>task  监控自检程序<br>gateway  貌似是需要跨机房时候会用<br>redis-monitor.py  script文件夹中有一个简单的脚本，把redis info 中的数据读出写入数据库。</p>
-<p>That’s all!<br>我会继续完善哒😊</p>
+<p>####模板策略报警配置</p>
+<p>#####cpu<br>cpu.idle:cpu处于空闲状态的比例<br>报警条件： all(#3)&lt;5</p>
+<p>cpu.user:cpu一共花了多少比例的时间运行在用户态空间或者用户进程<br> 报警条件：all(#3)&gt;50 </p>
+<p>#####df<br>df.bytes.free.percent/fstype=ext4,mount=/:硬盘空闲空间<br>报警条件：all(#3)&lt;10<br>硬盘小于10%之后会报警</p>
+<p>#####load<br>load.15min:15分钟内运行队列的平均线程数<br>报警条件：all(#3)&gt;8</p>
+<p>#####port<br>net.port.listen/port=9000:9000端口监视情况<br>报警条件：all(#3)==0</p>
+<p>#####proc<br>proc.num/name=redis:redis进程监控<br>报警条件：all(#1)==0</p>
+<p>####短信和微信报警设置</p>
+<p>#####微信报警设置<br>参考文件<a href="https://github.com/Yanjunhui/chat" target="_blank" rel="external">https://github.com/Yanjunhui/chat</a><br>注意：post请求 参数格式是form<br>That’s all!<br>我会继续完善哒😊</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://wliying.github.io/2017/08/12/CanonInstall/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="wangliying">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="wangliying's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/08/12/CanonInstall/" itemprop="url">Airdoc-Eye 适配Canon眼底照相机自动上传程序安装手册</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-12T12:57:00Z">
+                2017-08-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="安装环境："><a href="#安装环境：" class="headerlink" title="安装环境："></a>安装环境：</h4><ul>
+<li>window7 32bit</li>
+<li>.Net Framework4.5.2</li>
+</ul>
+<h4 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h4><ol>
+<li>点击setup.exe启动安装</li>
+<li>依次点击下一步进行安装</li>
+<li>安装路径下点击exe程序启动</li>
+</ol>
+<h4 id="程序说明"><a href="#程序说明" class="headerlink" title="程序说明"></a>程序说明</h4><ol>
+<li>默认安装路径：C:\Program Files (x86)\AutoUpload\AutoUpload\</li>
+<li>安装过程会写入注册表开机自启动，电脑中开着360安全卫士会提示风险，</li>
+<li><p>安装完成后，打开安装路径，.config文件为程序配置文件<br>配置文件中可更改的配置项在appSettings里的key&amp;value,分别是有：</p>
+<ul>
+<li>数据库文件MDF的路径examDBPath, examexDBPath</li>
+<li>API请求的URL地址API_DOMAIN</li>
+<li>APP_ID机构账号</li>
+<li>APP_KEY机构密码</li>
+</ul>
+<p>配置文件的connectionStrings标签是数据库的连接字符串，最重要的是MDF数据文件地址</p>
+</li>
+</ol>
 
           
         
@@ -665,7 +806,7 @@ tar -zxvf open-falcon.tar.gz -C ./tmp</code></p>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

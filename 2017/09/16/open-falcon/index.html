@@ -96,10 +96,10 @@
 <meta name="description" content="我是部署在一台centos7的测试机上，官方文档地址https://book.open-falcon.org/zh_0_2/index.html我没有按照官方文档配置，按官网说的一台机器启动全部后端组件没有起完全，所以我采用的是分布式安装启动。 下载：wget https://github.com/XiaoMi/open-falcon/releases/download/0.0.5/open-fa">
 <meta property="og:type" content="article">
 <meta property="og:title" content="open-falcon + centos7">
-<meta property="og:url" content="http://wliying.github.io/2017/07/21/open-falcon/index.html">
+<meta property="og:url" content="http://wliying.github.io/2017/09/16/open-falcon/index.html">
 <meta property="og:site_name" content="wangliying&#39;s blog">
 <meta property="og:description" content="我是部署在一台centos7的测试机上，官方文档地址https://book.open-falcon.org/zh_0_2/index.html我没有按照官方文档配置，按官网说的一台机器启动全部后端组件没有起完全，所以我采用的是分布式安装启动。 下载：wget https://github.com/XiaoMi/open-falcon/releases/download/0.0.5/open-fa">
-<meta property="og:updated_time" content="2017-07-21T08:22:57.000Z">
+<meta property="og:updated_time" content="2017-09-16T07:55:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="open-falcon + centos7">
 <meta name="twitter:description" content="我是部署在一台centos7的测试机上，官方文档地址https://book.open-falcon.org/zh_0_2/index.html我没有按照官方文档配置，按官网说的一台机器启动全部后端组件没有起完全，所以我采用的是分布式安装启动。 下载：wget https://github.com/XiaoMi/open-falcon/releases/download/0.0.5/open-fa">
@@ -130,7 +130,7 @@
 
 
 
-  <link rel="canonical" href="http://wliying.github.io/2017/07/21/open-falcon/"/>
+  <link rel="canonical" href="http://wliying.github.io/2017/09/16/open-falcon/"/>
 
 
 
@@ -255,7 +255,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://wliying.github.io/2017/07/21/open-falcon/">
+    <link itemprop="mainEntityOfPage" href="http://wliying.github.io/2017/09/16/open-falcon/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="wangliying">
@@ -284,8 +284,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-21T16:22:57+08:00">
-                2017-07-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-16T15:55:49+08:00">
+                2017-09-16
               </time>
             
 
@@ -340,7 +340,15 @@ tar -zxvf open-falcon.tar.gz -C ./tmp</code></p>
 <h5 id="sender"><a href="#sender" class="headerlink" title="sender"></a>sender</h5><p>这个组件用于调用自己提供的短信和邮件接口，编辑cfg.json添加地址<br>报警消息是先写入redis队列中，之后再调用接口；<br>worker参数是对队列的配置</p>
 <h5 id="links"><a href="#links" class="headerlink" title="links"></a>links</h5><p>报警合并组件，Python应用，我还是用的Python虚拟机启动的，没有试直接用Python是否可以启动</p>
 <p>另外还有三个模块我没有启动<br>task  监控自检程序<br>gateway  貌似是需要跨机房时候会用<br>redis-monitor.py  script文件夹中有一个简单的脚本，把redis info 中的数据读出写入数据库。</p>
-<p>That’s all!<br>我会继续完善哒😊</p>
+<p>####模板策略报警配置</p>
+<p>#####cpu<br>cpu.idle:cpu处于空闲状态的比例<br>报警条件： all(#3)&lt;5</p>
+<p>cpu.user:cpu一共花了多少比例的时间运行在用户态空间或者用户进程<br> 报警条件：all(#3)&gt;50 </p>
+<p>#####df<br>df.bytes.free.percent/fstype=ext4,mount=/:硬盘空闲空间<br>报警条件：all(#3)&lt;10<br>硬盘小于10%之后会报警</p>
+<p>#####load<br>load.15min:15分钟内运行队列的平均线程数<br>报警条件：all(#3)&gt;8</p>
+<p>#####port<br>net.port.listen/port=9000:9000端口监视情况<br>报警条件：all(#3)==0</p>
+<p>#####proc<br>proc.num/name=redis:redis进程监控<br>报警条件：all(#1)==0</p>
+<p>####短信和微信报警设置</p>
+<p>#####微信报警设置<br>参考文件<a href="https://github.com/Yanjunhui/chat" target="_blank" rel="external">https://github.com/Yanjunhui/chat</a><br>注意：post请求 参数格式是form<br>That’s all!<br>我会继续完善哒😊</p>
 
       
     </div>
@@ -377,8 +385,8 @@ tar -zxvf open-falcon.tar.gz -C ./tmp</code></p>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/13/hexo-blog/" rel="next" title="Hexo + GitHub Pages搭建博客">
-                <i class="fa fa-chevron-left"></i> Hexo + GitHub Pages搭建博客
+              <a href="/2017/08/12/CanonInstall/" rel="next" title="Airdoc-Eye 适配Canon眼底照相机自动上传程序安装手册">
+                <i class="fa fa-chevron-left"></i> Airdoc-Eye 适配Canon眼底照相机自动上传程序安装手册
               </a>
             
           </div>
@@ -458,7 +466,7 @@ tar -zxvf open-falcon.tar.gz -C ./tmp</code></p>
           
             <div class="site-state-item site-state-posts">
               <a href="/archives/">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
