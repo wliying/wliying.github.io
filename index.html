@@ -287,7 +287,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-22T12:59:33Z">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-22T13:02:58Z">
                 2017-09-22
               </time>
             
@@ -324,16 +324,13 @@
       
         
           
-            <p>##下载安装</p>
-<p>参考<a href="https://book.open-falcon.org/zh_0_2/intro/index.html" target="_blank" rel="external">官方文档</a></p>
-<p>##报警模块</p>
-<p>###短信配置</p>
-<p>  <a href="http://pan.baidu.com/s/1slbRFfn" target="_blank" rel="external">短信发送服务脚本</a></p>
+            <h2 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h2><p>参考<a href="https://book.open-falcon.org/zh_0_2/intro/index.html" target="_blank" rel="external">官方文档</a></p>
+<h2 id="报警模块"><a href="#报警模块" class="headerlink" title="报警模块"></a>报警模块</h2><h3 id="短信配置"><a href="#短信配置" class="headerlink" title="短信配置"></a>短信配置</h3><p>  <a href="http://pan.baidu.com/s/1slbRFfn" target="_blank" rel="external">短信发送服务脚本</a></p>
 <ul>
 <li><p>修改脚本中的短信发送账号密码即可使用</p>
 <p>启动命令</p>
-<p><code>nohup python http_sms.py &amp;</code><br>###微信配置</p>
-<p><a href="https://github.com/Yanjunhui/chat" target="_blank" rel="external">参考文档</a></p>
+<p><code>nohup python http_sms.py &amp;</code></p>
+<h3 id="微信配置"><a href="#微信配置" class="headerlink" title="微信配置"></a>微信配置</h3><p><a href="https://github.com/Yanjunhui/chat" target="_blank" rel="external">参考文档</a></p>
 <p>文档中有企业微信号的申请方法，我就申请的个人企业微信号，选择不认证企业即可申请成功。<br>接下来就依照文档中设置即可。</p>
 </li>
 </ul>
@@ -346,8 +343,7 @@
   sms为短信服务的访问地址
 </code></pre><p>  然而现在这样还是不能收到微信报警信息，为什么？<br>  因为系统不知道给哪个微信用户发呀，以上我们是配置完成了后台的微信机制。<br>  下面我还需要做的就是去监控系统的后台，用户管理那里修改用户信息，<br>  在im一栏中填写企业微信成员生成的微信号</p>
 <p>  👌 万事俱备，坐等报警啦！</p>
-<p>  ##docker监控</p>
-<p>  我是用的是<a href="https://github.com/cqyijifu/OpenFalcon-SuitAgent" target="_blank" rel="external">SuitAgent</a>，一个第三方插件。</p>
+<h2 id="docker监控"><a href="#docker监控" class="headerlink" title="docker监控"></a>docker监控</h2><p>  我是用的是<a href="https://github.com/cqyijifu/OpenFalcon-SuitAgent" target="_blank" rel="external">SuitAgent</a>，一个第三方插件。</p>
 <p>  直接clone最新的代码或者下载zip包进行安装</p>
 <p>  or<a href="http://pan.baidu.com/s/1gfakrN9" target="_blank" rel="external">我的云盘共享地址</a></p>
 <p>  <a href="https://github.com/cqyijifu/OpenFalcon-SuitAgent/wiki" target="_blank" rel="external">SuitAgent文档</a></p>
@@ -355,16 +351,14 @@
 <p>  <a href="http://pan.baidu.com/s/1boYq5GF" target="_blank" rel="external">Java1.8 Linux64存放地址</a></p>
 <p>  <a href="http://pan.baidu.com/s/1qYr2PFQ" target="_blank" rel="external">maven3.5存放地址</a></p>
 <p>  解压后配置环境变量即可使用</p>
-<p>  ####设置环境变量：</p>
-<pre><code>vi /etc/profile
+<h4 id="设置环境变量："><a href="#设置环境变量：" class="headerlink" title="设置环境变量："></a>设置环境变量：</h4><pre><code>vi /etc/profile
 export M2_HOME=/home/ubuntu/apache-maven-3.5.0
 export JAVA_HOME=/home/ubuntu/jdk1.8.0_144
 export CLASSPATH=.:$JAVA_HOME/lib:$CLASSPATH
 export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$M2_HOME/bin:$PATH
 
 source /etc/profile
-</code></pre><p>  ####编译</p>
-<p>  选择对应的版本进行编译，我们机器是linux-64，所以选择如下第一条指令在下载的suitAgent-master根目录下执行即可开始编译</p>
+</code></pre><h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><p>  选择对应的版本进行编译，我们机器是linux-64，所以选择如下第一条指令在下载的suitAgent-master根目录下执行即可开始编译</p>
 <ul>
 <li>linux-64 : mvn clean package -Plinux-64 -Dmaven.test.skip=true</li>
 <li>linux64-noJar : mvn clean package -Plinux64-noJar -Dmaven.test.skip=true</li>
